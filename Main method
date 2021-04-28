@@ -1,0 +1,32 @@
+
+
+import java.util.Scanner;
+
+public class Homework6Solution {
+
+   public static void main(String [] args) {
+      Scanner keyboard = new Scanner(System.in);
+      final int REAL_PIN = 1234;
+      int tries = 0;
+      
+      System.out.println("Enter your Personal Identification Number (PIN)");
+      int userPin = keyboard.nextInt();
+      tries = tries + 1;
+      
+      while(userPin != REAL_PIN && tries < 3) {
+         System.out.println("Error. Incorrect pin. Try again");
+         
+         System.out.println("Enter your Personal Identification Number (PIN)");
+         userPin = keyboard.nextInt();
+         
+         tries = tries + 1;
+      }
+      
+      if(userPin == REAL_PIN) {
+         System.out.println("You have entered your pin correctly and you have access to your account.");
+      }
+      else {
+         System.out.println("You will not be able to access your account.");
+      }
+   }
+}
